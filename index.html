@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Libros | Librería y Distribuidora en Echesortu, Rosario</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="leolibros.css">
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-editorial sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#inicio">
+                <span class="bg-warning text-dark rounded-3 px-2 py-1 d-inline-flex align-items-center">
+                    <i class="bi bi-book-half"></i>
+                </span>
+                <span class="font-serif fs-4">Leo Libros</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-1 my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#editorial">La Editorial y Librería</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#entrevista">Audio Entrevista</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#catalogo">Catálogo Vivo</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#principito">El Principito</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#muro">Muro de Lectores</a></li>
+                     <li class="nav-item"><a class="nav-link nav-link-custom" href="index2.html">La Feria del Libro</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="btnDescargarZip" class="btn btn-outline-warning rounded-pill px-3 py-2 me-1" type="button" title="Descargar proyecto separado en ZIP">
+                            <i class="bi bi-file-earmark-zip-fill me-1"></i> Descargar ZIP
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-dorado rounded-pill px-3 py-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#drawerBolsa">
+                            <i class="bi bi-bag-heart-fill me-1"></i> Mi Bolsa
+                            <span id="badgeBolsa" class="badge rounded-pill bg-dark text-white ms-1">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <header id="inicio" class="hero-editorial py-5">
+        <div class="container py-lg-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <div class="d-inline-flex align-items-center gap-2 badge-ubicacion rounded-pill px-3 py-2 mb-3 fw-semibold small">
+                        <i class="bi bi-geo-alt-fill"></i> Marcos Paz 3904 · Barrio Echesortu, Rosario
+                    </div>
+                    <h1 class="display-4 fw-bold mb-3" style="color: var(--azul-editorial);">
+                        Leo Libros: <span class="fst-italic fw-normal">“Vive la vida que lees”</span>
+                    </h1>
+                    <p class="lead text-secondary mb-4">
+                        Desde el año <strong>2001</strong> somos punto de encuentro en Echesortu como editorial, distribuidora y librería de barrio. Acercamos libros nuevos, usados seleccionados, ediciones de saldo y clásicos escolares con atención personalizada cara a cara.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#entrevista" class="btn btn-azul btn-lg rounded-pill px-4 shadow-sm">
+                            <i class="bi bi-headphones me-2"></i>Escuchar Entrevista en Feria
+                        </a>
+                        <a href="#catalogo" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            <i class="bi bi-search me-2"></i>Explorar Catálogo
+                        </a>
+                    </div>
+                    <div class="row g-3 mt-4 pt-2">
+                        <div class="col-4">
+                            <div class="p-3 bg-white rounded-4 border">
+                                <div class="fw-bold fs-4" style="color: var(--azul-editorial);">+24 años</div>
+                                <div class="small text-muted">En Echesortu (desde 2001)</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 bg-white rounded-4 border">
+                                <div class="fw-bold fs-4" style="color: var(--azul-editorial);">$2.000</div>
+                                <div class="small text-muted">Clásicos nuevos desde</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 bg-white rounded-4 border">
+                                <div class="fw-bold fs-4" style="color: var(--azul-editorial);">20% OFF</div>
+                                <div class="small text-muted">En stands y feria</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                        <div class="p-4 p-md-5 text-white" style="background: linear-gradient(145deg, #162b4d 0%, #244375 100%);">
+                            <div class="d-flex justify-content-between align-items-start mb-4">
+                                <span class="badge bg-warning text-dark rounded-pill px-3 py-2 fw-semibold">
+                                    Cobertura Especial · Feria del Libro
+                                </span>
+                                <i class="bi bi-bookmark-star-fill text-warning fs-2"></i>
+                            </div>
+                            <h2 class="font-serif h3 mb-3">El sello del barrio en cada página</h2>
+                            <p class="opacity-75 mb-4">
+                                “A cada ejemplar que sale de nuestro stand le ponemos nuestro sellito con el contacto del local, nuestro Instagram <strong>@leo.libros.rosario</strong> y WhatsApp para que los lectores vuelvan a encontrarnos en Marcos Paz 3904.”
+                            </p>
+                            <div class="p-3 rounded-3 bg-white bg-opacity-10 border border-white border-opacity-25 small">
+                                <div class="d-flex align-items-center gap-2 mb-1">
+                                    <i class="bi bi-shop text-warning"></i>
+                                    <strong>Local y Distribuidora:</strong> Marcos Paz 3904, Rosario
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-instagram text-warning"></i>
+                                    <span>@leo.libros.rosario · Escuelas y público general</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+
+       
+        <section id="editorial" class="py-4 scroll-offset">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <span class="text-uppercase fw-bold small" style="color: var(--dorado-libro); letter-spacing: 1px;">Identidad Rosarina</span>
+                    <h2 class="display-6 fw-bold mt-1 mb-3" style="color: var(--azul-editorial);">
+                        De Marcos Paz 3904 a la Feria Internacional del Libro
+                    </h2>
+                    <div class="carousel">
+        <!-- Pistas de imágenes -->
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img src="leolibros.img/unnamed.webp" alt="Paisaje 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="leolibros.img/unnamed (2).webp" alt="Paisaje 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="leolibros.img/unnamed (1).webp" alt="Paisaje 3">
+            </div>
+        </div>
+
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+
+        <div class="carousel-nav">
+            <button class="carousel-indicator current-slide" data-target="0"></button>
+            <button class="carousel-indicator" data-target="1"></button>
+            <button class="carousel-indicator" data-target="2"></button>
+        </div>
+    </div>
+                    <p class="text-secondary fs-5">
+                        Leo Libros nació en <strong>2001</strong> en el corazón comercial y barrial de <strong>Echesortu</strong>. A lo largo de más de dos décadas, construyó un modelo mixto que combina la distribución editorial, la venta de libros usados y saldos seleccionados, y una fuerte presencia en ferias culturales.
+                    </p>
+                    <p class="text-secondary">
+                        Mientras en su local tradicional los vecinos encuentran novelas románticas, libros usados difíciles de conseguir y ediciones de saldo a precios accesibles, en eventos masivos como la Feria del Libro presentan un catálogo de <strong>libros nuevos con descuentos de hasta el 20%</strong> y promociones en efectivo.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="p-4 bg-white rounded-4 border h-100 shadow-sm">
+                                <div class="rounded-3 d-inline-flex p-2 mb-3" style="background: var(--dorado-suave); color: var(--azul-editorial);">
+                                    <i class="bi bi-mortarboard-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Vínculo con Escuelas</h3>
+                                <p class="small text-secondary mb-0">
+                                    Trabajamos codo a codo con docentes y escuelas de Echesortu desde 4° grado, preparando ediciones económicas para lectura en el aula.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 bg-white rounded-4 border h-100 shadow-sm">
+                                <div class="rounded-3 d-inline-flex p-2 mb-3" style="background: var(--dorado-suave); color: var(--azul-editorial);">
+                                    <i class="bi bi-tags-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Clásicos Accesibles</h3>
+                                <p class="small text-secondary mb-0">
+                                    Línea propia de clásicos económicos (Jane Austen, Conan Doyle, Saint-Exupéry) desde $2.000 para que cualquiera arme su biblioteca.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 bg-white rounded-4 border h-100 shadow-sm">
+                                <div class="rounded-3 d-inline-flex p-2 mb-3" style="background: var(--dorado-suave); color: var(--azul-editorial);">
+                                    <i class="bi bi-arrow-repeat fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Usados y Saldos</h3>
+                                <p class="small text-secondary mb-0">
+                                    En nuestro local de Marcos Paz 3904 renovamos permanentemente estanterías de libros usados en excelente estado y oportunidades de saldo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 bg-white rounded-4 border h-100 shadow-sm">
+                                <div class="rounded-3 d-inline-flex p-2 mb-3" style="background: var(--dorado-suave); color: var(--azul-editorial);">
+                                    <i class="bi bi-chat-heart-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Guías de Lectura</h3>
+                                <p class="small text-secondary mb-0">
+                                    Recomendación cara a cara: desde cuentos infantiles para regalar a nietos o sobrinos hasta literatura juvenil y novelas contemporáneas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-10">
+
+        
+        <section id="entrevista" class="py-4 scroll-offset">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <div class="reproductor-box p-4 p-md-5 shadow-lg">
+                        <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
+                            <div>
+                                <span class="badge bg-warning text-dark mb-1">Registro Sonoro Oficial · Stand Leo Libros</span>
+                                <h2 class="font-serif h3 mb-0 text-white">Entrevista en el Stand de Leo Libros</h2>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <span id="audioSourceBadge" class="badge bg-white bg-opacity-10 text-warning border border-warning border-opacity-25 font-monospace px-3 py-2">
+                                    <i class="bi bi-volume-up-fill me-1"></i> Audio Narrado Listo
+                                </span>
+                                <label for="cargarAudioLocal" class="btn btn-sm btn-outline-warning rounded-pill px-3 mb-0" style="cursor: pointer;" title="Seleccionar tu archivo WhatsApp Audio .mp4 desde tu computadora o celular">
+                                    <i class="bi bi-upload me-1"></i> Cargar archivo .mp4
+                                </label>
+                                <input type="file" id="cargarAudioLocal" accept="audio/*,video/mp4" class="d-none">
+                            </div>
+                        </div>
+
+                       
+                        <audio id="entrevistaAudio" preload="metadata" class="d-none">
+                            <source src="WhatsApp Audio 2026-11-18 at 16.29.15.mp4" type="audio/mp4">
+                        </audio>
+
+                        
+                        <div class="bg-white bg-opacity-10 rounded-4 p-3 p-md-4 mb-4 border border-white border-opacity-10">
+                            <div class="d-flex align-items-center gap-3">
+                                <button id="btnPlayPause" class="btn-play-audio flex-shrink-0 shadow" type="button" aria-label="Reproducir o pausar entrevista">
+                                    <i id="iconPlayPause" class="bi bi-play-fill fs-3"></i>
+                                </button>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center small mb-1">
+                                        <span id="estadoReproduccion" class="text-warning fw-semibold">Pulsa Play para escuchar la entrevista</span>
+                                        <span class="font-monospace"><span id="tiempoActual">00:00</span> / <span id="tiempoTotal">01:55</span></span>
+                                    </div>
+                                    <input type="range" id="barraProgreso" class="form-range" min="0" max="115" value="0" aria-label="Progreso del audio">
+                                </div>
+                                <button id="btnMute" class="btn btn-outline-light btn-sm rounded-circle p-2" type="button" aria-label="Silenciar">
+                                    <i id="iconMute" class="bi bi-volume-up-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="segmento-audio p-3 bg-white bg-opacity-10 h-100">
+                                    <div class="small text-warning fw-bold mb-1">01 · Catálogo de Feria vs. Local de Barrio</div>
+                                    <p class="small mb-0 opacity-90">
+                                        “Acá a la feria traemos todos libros nuevos con descuentos de hasta el 20% y ofertas en efectivo. En nuestro local de Marcos Paz 3904 trabajamos muchísimo con libros usados, novelas románticas y saldos.”
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="segmento-audio p-3 bg-white bg-opacity-10 h-100">
+                                    <div class="small text-warning fw-bold mb-1">02 · Clásicos Económicos desde $2.000</div>
+                                    <p class="small mb-0 opacity-90">
+                                        “Tenemos una línea de clásicos económicos como <em>Orgullo y Prejuicio</em> de Jane Austen o <em>La señal de los cuatro</em> de Conan Doyle desde $2.000 nuevos, ideales para empezar a leer y armar una biblioteca.”
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="segmento-audio p-3 bg-white bg-opacity-10 h-100">
+                                    <div class="small text-warning fw-bold mb-1">03 · Escuelas de Echesortu y El Principito</div>
+                                    <p class="small mb-0 opacity-90">
+                                        “Todas las escuelas del barrio Echesortu nos compran a partir de cuarto grado. Las maestras mandan a pedir <em>El Principito</em>, que tenemos en edición económica nueva a $6.000.”
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="segmento-audio p-3 bg-white bg-opacity-10 h-100">
+                                    <div class="small text-warning fw-bold mb-1">04 · El Sello del Barrio en Cada Libro</div>
+                                    <p class="small mb-0 opacity-90">
+                                        “Participar en ferias nos ayuda a que nos conozcan y llevar lectores al barrio. A cada ejemplar le ponemos nuestro sellito con WhatsApp e Instagram <strong>@leo.libros.rosario</strong>.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-10">
+
+       
+        <section id="catalogo" class="py-4 scroll-offset">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+                <div>
+                    <span class="text-uppercase fw-bold small" style="color: var(--dorado-libro);">Estantería Digital</span>
+                    <h2 class="display-6 fw-bold mb-1" style="color: var(--azul-editorial);">Catálogo Vivo de Leo Libros</h2>
+                    <p class="text-secondary mb-0">Filtrá por categoría, revisá las fichas y armá tu lista para consultar stock por WhatsApp.</p>
+                </div>
+                <div class="w-100" style="max-width: 340px;">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 rounded-start-pill"><i class="bi bi-search text-muted"></i></span>
+                        <input type="text" id="inputBuscador" class="form-control border-start-0 rounded-end-pill" placeholder="Buscar título, autor o género...">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="d-flex flex-wrap gap-2 mb-4" id="filtrosCategoria">
+                <button class="btn btn-azul rounded-pill px-3 btn-sm filter-btn active" data-cat="todos">Todos los títulos</button>
+                <button class="btn btn-outline-secondary rounded-pill px-3 btn-sm filter-btn" data-cat="clasicos">Clásicos Económicos ($2.000+)</button>
+                <button class="btn btn-outline-secondary rounded-pill px-3 btn-sm filter-btn" data-cat="escolar">Lectura Escolar</button>
+                <button class="btn btn-outline-secondary rounded-pill px-3 btn-sm filter-btn" data-cat="novelas">Novelas y Romántica</button>
+                <button class="btn btn-outline-secondary rounded-pill px-3 btn-sm filter-btn" data-cat="infantil">Infantil y Cuentos</button>
+            </div>
+
+            
+            <div class="row g-4" id="gridCatalogo"></div>
+        </section>
+
+        <hr class="my-5 opacity-10">
+
+       
+        <section id="principito" class="py-4 scroll-offset">
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-lg-5 p-4 p-md-5 text-white d-flex flex-column justify-content-between" style="background: linear-gradient(160deg, #162b4d 0%, #0e1d36 100%);">
+                        <div>
+                            <span class="badge bg-warning text-dark rounded-pill px-3 py-2 mb-3 fw-semibold">
+                                Recomendado Escolar · 4° Grado Echesortu
+                            </span>
+                            <h2 class="font-serif display-6 fw-bold mb-1">El Principito</h2>
+                            <p class="fst-italic opacity-75 mb-4">Antoine de Saint-Exupéry · Edición Económica ($6.000)</p>
+                        </div>
+
+                        
+                        <div class="my-3 text-center">
+                            <svg viewBox="0 0 260 190" class="w-100" style="max-width: 240px;" role="img" aria-label="Ilustración del Asteroide B-612">
+                                <circle cx="42" cy="35" r="2" fill="#f5e6c8" opacity="0.8"/>
+                                <circle cx="215" cy="28" r="2.5" fill="#d49626"/>
+                                <circle cx="228" cy="85" r="1.8" fill="#ffffff" opacity="0.7"/>
+                                <circle cx="30" cy="110" r="2" fill="#d49626" opacity="0.8"/>
+                                <polygon points="185,45 188,52 195,52 189,57 191,64 185,59 179,64 181,57 175,52 182,52" fill="#d49626"/>
+                                <circle cx="130" cy="125" r="46" fill="#2c4c7e" stroke="#d49626" stroke-width="2"/>
+                                <circle cx="112" cy="115" r="8" fill="#1d355b"/>
+                                <circle cx="148" cy="135" r="10" fill="#1d355b"/>
+                                <line x1="130" y1="79" x2="130" y2="54" stroke="#68b684" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M130 67 Q120 62 122 57 Q128 60 130 67" fill="#68b684"/>
+                                <circle cx="130" cy="50" r="8" fill="#e05a6d"/>
+                                <circle cx="130" cy="50" r="4" fill="#ff8fa3"/>
+                                <path d="M116 79 L116 52 A14 14 0 0 1 144 52 L144 79" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <div class="small text-warning fw-semibold mb-2">Explorá cómo cambia según tu edad:</div>
+                            <div class="btn-group w-100" role="group" aria-label="Etapas de lectura">
+                                <button type="button" class="btn btn-sm btn-etapa active" data-etapa="infancia">Infancia</button>
+                                <button type="button" class="btn btn-sm btn-etapa" data-etapa="adolescencia">Adolescencia</button>
+                                <button type="button" class="btn btn-sm btn-etapa" data-etapa="adultez">Adultez</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 p-4 p-md-5 bg-white d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="h4 fw-bold mb-3" style="color: var(--azul-editorial);">¿Por qué sigue siendo el libro más pedido en Leo Libros?</h3>
+                            <p class="text-secondary">
+                                Como contaron los libreros en la entrevista, <strong>El Principito</strong> es lectura obligatoria y elegida en las escuelas del barrio Echesortu a partir de cuarto grado. Contamos tanto con ediciones económicas ideales para el aula ($6.000) como con ediciones ilustradas de colección.
+                            </p>
+                            <div id="cajaReflexionEtapa" class="p-4 rounded-4 my-4" style="background-color: var(--papel-crema); border-left: 4px solid var(--dorado-libro);">
+                                <div class="fw-bold mb-1" style="color: var(--azul-editorial);">Mirada en la Infancia (4° Grado):</div>
+                                <p class="mb-0 text-secondary">
+                                    “De chico te maravilla la aventura por los asteroides, los dibujos del elefante dentro de la boa y la ternura del zorro. Es la puerta de entrada perfecta para enamorarse de los libros en papel.”
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top">
+                            <div>
+                                <span class="text-muted small d-block">Edición escolar recomendada</span>
+                                <span class="fs-4 fw-bold" style="color: var(--azul-editorial);">$6.000</span>
+                            </div>
+                            <button type="button" class="btn btn-dorado rounded-pill px-4 py-2" onclick="agregarALaBolsa('El Principito (Edición Escolar)', 6000)">
+                                <i class="bi bi-bag-plus-fill me-2"></i>Agregar a mi consulta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-10">
+
+        
+        <section id="muro" class="py-4 scroll-offset">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <span class="text-uppercase fw-bold small" style="color: var(--dorado-libro);">Comunidad Echesortu</span>
+                    <h2 class="display-6 fw-bold mt-1 mb-3" style="color: var(--azul-editorial);">Muro de Lectores</h2>
+                    <p class="text-secondary">
+                        ¿Pasaste por el local de Marcos Paz 3904 o nos visitaste en el stand de la Feria del Libro? Dejá tu recomendación o contanos qué libro te llevaste.
+                    </p>
+                    <form id="formMuro" class="bg-white p-4 rounded-4 border shadow-sm">
+                        <div class="mb-3">
+                            <label for="nombreLector" class="form-label fw-semibold small">Tu nombre o barrio</label>
+                            <input type="text" id="nombreLector" class="form-control rounded-3" placeholder="Ej: Martina (Echesortu)" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="libroFavorito" class="form-label fw-semibold small">Libro que recomendás</label>
+                            <input type="text" id="libroFavorito" class="form-control rounded-3" placeholder="Ej: Orgullo y Prejuicio" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensajeLector" class="form-label fw-semibold small">Tu comentario</label>
+                            <textarea id="mensajeLector" class="form-control rounded-3" rows="3" placeholder="Contanos tu experiencia en Leo Libros..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-azul w-100 rounded-pill py-2 fw-semibold">
+                            <i class="bi bi-send-fill me-2"></i>Publicar en el muro
+                        </button>
+                    </form>
+                </div>
+
+                <div class="col-lg-7">
+                    <div id="listaComentarios" class="d-flex flex-column gap-3"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="text-white py-5 mt-4" style="background-color: var(--azul-profundo);">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h3 class="font-serif h4 text-warning mb-2">Leo Libros</h3>
+                    <p class="small opacity-75 mb-3">
+                        Editorial, distribuidora y librería de barrio en Rosario desde 2001. “Vive la vida que lees”.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="https://instagram.com/leo.libros.rosario" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                            <i class="bi bi-instagram me-1"></i> @leo.libros.rosario
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h6 text-uppercase text-warning fw-bold mb-3">Dónde encontrarnos</h4>
+                    <ul class="list-unstyled small opacity-75 d-flex flex-column gap-2">
+                        <li><i class="bi bi-geo-alt-fill text-warning me-2"></i>Marcos Paz 3904, Barrio Echesortu, Rosario</li>
+                        <li><i class="bi bi-clock-fill text-warning me-2"></i>Lunes a Sábados · Atención personalizada</li>
+                        <li><i class="bi bi-book-fill text-warning me-2"></i>Libros nuevos, usados, saldos y textos escolares</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="h6 text-uppercase text-warning fw-bold mb-3">Proyecto Periodístico</h4>
+                    <p class="small opacity-75 mb-0">
+                        Cobertura especial en la Feria Internacional del Libro de Rosario. Edición interactiva dedicada a las librerías independientes.
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="text-center small opacity-50">
+                Abigail Gamarra 4°A · 2024 ·
+            </div>
+        </div>
+    </footer>
+
+   
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="drawerBolsa" aria-labelledby="drawerBolsaLabel">
+        <div class="offcanvas-header text-white" style="background-color: var(--azul-editorial);">
+            <h5 class="offcanvas-title font-serif" id="drawerBolsaLabel">
+                <i class="bi bi-bag-heart-fill text-warning me-2"></i>Mi Bolsa de Consulta
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <div>
+                <p class="small text-muted">
+                    Agregá los libros que te interesan y generá tu consulta lista para enviar al WhatsApp de <strong>Leo Libros (Marcos Paz 3904)</strong>.
+                </p>
+                <div id="itemsBolsa" class="d-flex flex-column gap-2 my-3"></div>
+            </div>
+            <div class="border-top pt-3">
+                <div class="d-flex justify-content-between fw-bold fs-5 mb-3">
+                    <span>Total estimado:</span>
+                    <span id="totalBolsa" style="color: var(--azul-editorial);">$0</span>
+                </div>
+                <button id="btnEnviarWhatsapp" type="button" class="btn btn-success w-100 rounded-pill py-2 fw-semibold mb-2">
+                    <i class="bi bi-whatsapp me-2"></i>Consultar por WhatsApp
+                </button>
+                <button id="btnCopiarConsulta" type="button" class="btn btn-outline-secondary w-100 rounded-pill btn-sm">
+                    <i class="bi bi-clipboard me-1"></i>Copiar lista al portapapeles
+                </button>
+                <div id="feedbackCopia" class="small text-success text-center mt-2 d-none">¡Consulta copiada al portapapeles!</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="modalLibro" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header text-white" style="background-color: var(--azul-editorial);">
+                    <h5 class="modal-title font-serif" id="modalTitulo">Ficha del Libro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-4" id="modalCuerpo"></div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
+    <script src="leolibros.js"></script>
+</body>
+</html>

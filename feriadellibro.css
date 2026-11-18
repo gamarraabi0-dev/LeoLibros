@@ -1,0 +1,205 @@
+:root {
+    --azul-editorial: #2a3b4c;
+    --azul-profundo: #1b2631;
+    --dorado-libro: #b89753;
+    --dorado-suave: #f4efe6;
+    --papel-crema: #f9f7f2;
+    --papel-tostado: #f0ece1;
+    --tinta: #2c3e50;
+    --tinta-suave: #6c7a89;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--papel-crema);
+    color: var(--tinta);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif {
+    font-family: 'Fraunces', Georgia, serif;
+}
+
+.navbar-editorial {
+    background-color: var(--azul-profundo);
+    border-bottom: 1px solid rgba(184, 151, 83, 0.3);
+}
+
+.nav-link-custom {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    border-radius: 999px;
+    padding: 0.45rem 1rem !important;
+    transition: all 0.2s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: #ffffff !important;
+    background-color: rgba(184, 151, 83, 0.2);
+}
+
+.hero-editorial {
+    background: linear-gradient(180deg, #ffffff 0%, var(--papel-tostado) 100%);
+    border-bottom: 1px solid rgba(42, 59, 76, 0.1);
+}
+
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: #e2dcd0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(42, 59, 76, 0.12);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e2d5;
+    color: #7c7365;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(42, 59, 76, 0.6);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background-color: rgba(42, 59, 76, 0.9);
+}
+
+.carousel-button.prev { left: 15px; }
+.carousel-button.next { right: 15px; }
+
+.carousel-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.current-slide {
+    background-color: #ffffff;
+}
+
+.card-editorial {
+    background: #ffffff;
+    border: 1px solid rgba(42, 59, 76, 0.08);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.highlight-box {
+    background-color: var(--dorado-suave);
+    border-left: 4px solid var(--dorado-libro);
+    padding: 1.5rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.btn-azul {
+    background-color: var(--azul-editorial);
+    color: #ffffff;
+    border: 1px solid var(--azul-editorial);
+}
+
+.btn-azul:hover {
+    background-color: var(--azul-profundo);
+    color: #ffffff;
+}
+
+.scroll-offset {
+    scroll-margin-top: 84px;
+}
+
+.btn-volver-arriba {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--azul-editorial);
+    color: #ffffff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn-volver-arriba:hover {
+    background-color: var(--azul-profundo);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Estilo opcional para el botón flotante circular en la esquina */
+.btn-flotante-inicio {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--dorado-libro);
+    color: var(--azul-profundo);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-flotante-inicio:hover {
+    background-color: #e2a534;
+    color: var(--azul-profundo);
+    transform: scale(1.08);
+}

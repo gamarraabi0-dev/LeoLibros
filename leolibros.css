@@ -1,0 +1,234 @@
+:root{
+--azul-editorial: #162b4d;
+--azul-profundo: #0e1d36;
+--dorado-libro: #d49626;
+--dorado-suave: #f5e6c8;
+--papel-crema: #faf7f2;
+--papel-tostado: #f1ebe0;
+--tinta: #24292f;
+--tinta-suave: #57606a;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--papel-crema);
+color: var(--tinta);
+font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif {
+font-family: 'Fraunces', Georgia, serif;
+}
+
+
+.navbar-editorial {
+background-color: rgba(22, 43, 77, 0.96);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(212, 150, 38, 0.25);
+}
+
+.nav-link-custom {
+color: rgba(255, 255, 255, 0.85) !important;
+font-weight: 500;
+border-radius: 999px;
+padding: 0.45rem 1rem !important;
+transition: all 0.2s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+color: #ffffff !important;
+background-color: rgba(212, 150, 38, 0.22);
+}
+
+
+.hero-editorial {
+background: radial-gradient(circle at 85% 20%, rgba(212, 150, 38, 0.14) 0%, transparent 45%),
+linear-gradient(180deg, #ffffff 0%, var(--papel-tostado) 100%);
+border-bottom: 1px solid rgba(22, 43, 77, 0.1);
+}
+
+.badge-ubicacion {
+background-color: var(--dorado-suave);
+color: #7c5208;
+border: 1px solid rgba(212, 150, 38, 0.4);
+}
+
+
+.card-libro {
+background: #ffffff;
+border: 1px solid rgba(22, 43, 77, 0.08);
+border-radius: 1.25rem;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-libro:hover {
+transform: translateY(-5px);
+box-shadow: 0 14px 30px rgba(22, 43, 77, 0.1);
+}
+
+.lomo-decorativo {
+width: 14px;
+background: linear-gradient(90deg, rgba(0, 0, 0, 0.22) 0%, rgba(255, 255, 255, 0.18) 45%, rgba(0, 0, 0, 0.12) 100%);
+}
+
+
+.reproductor-box {
+background: linear-gradient(135deg, var(--azul-editorial) 0%, var(--azul-profundo) 100%);
+color: #ffffff;
+border-radius: 1.5rem;
+border: 1px solid rgba(212, 150, 38, 0.35);
+}
+
+.btn-play-audio {
+width: 58px;
+height: 58px;
+border-radius: 50%;
+background-color: var(--dorado-libro);
+color: var(--azul-profundo);
+border: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-play-audio:hover {
+transform: scale(1.06);
+background-color: #e5a835;
+}
+
+.segmento-audio {
+transition: all 0.3s ease;
+border-radius: 0.75rem;
+}
+
+
+.btn-azul {
+background-color: var(--azul-editorial);
+color: #ffffff;
+border: 1px solid var(--azul-editorial);
+}
+
+.btn-azul:hover {
+background-color: var(--azul-profundo);
+color: #ffffff;
+}
+
+.btn-dorado {
+background-color: var(--dorado-libro);
+color: #162b4d;
+font-weight: 700;
+border: none;
+}
+
+.btn-dorado:hover {
+background-color: #e2a534;
+color: #0e1d36;
+}
+
+.scroll-offset {
+scroll-margin-top: 84px;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+}
+
+/* Contenedor de las diapositivas */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+/* Cada imagen/diapositiva */
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+}
+
+/* Botones de navegación (Anterior / Siguiente) */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 15px;
+}
+
+.carousel-button.next {
+    right: 15px;
+}
+
+/* Indicadores de puntos (dots) */
+.carousel-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.current-slide {
+    background-color: white;
+}
+
+.btn-etapa {
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: rgba(255, 255, 255, 0.85);
+background: rgba(255, 255, 255, 0.06);
+}
+
+.btn-etapa.active,
+.btn-etapa:hover {
+background: var(--dorado-libro);
+color: var(--azul-profundo);
+border-color: var(--dorado-libro);
+font-weight: 600;
+}
